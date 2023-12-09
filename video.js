@@ -1,6 +1,6 @@
 
-
 document.addEventListener("DOMContentLoaded", function () {
+    // Use a regular variable instead of a private field
     const videoContainer = document.getElementById("videoContainer");
 
     // Replace these video IDs with your actual video IDs
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         iframe.src = `https://www.youtube.com/embed/${videoId}`;
         iframe.width = "560";
         iframe.height = "315";
-        iframe.allowFullscreen = true;
+        iframe.setAttribute("allowfullscreen", true);
         videoContainer.appendChild(iframe);
     });
 });
